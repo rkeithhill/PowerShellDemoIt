@@ -15,9 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
     console.log('Congratulations, your extension "powershelldemoit" is now active!');
 
 	const rootPath = vscode.workspace.rootPath;
-
 	const demoExplorerProvider = new DemoExplorerProvider(rootPath);
-
 	vscode.window.registerTreeDataProvider('powershellDemoExplorer', demoExplorerProvider);
 
     // The command has been defined in the package.json file
